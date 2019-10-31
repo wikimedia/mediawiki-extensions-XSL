@@ -15,7 +15,7 @@ class XSLExtensionHooks {
 		$output = XSLExtensionHooks::xslTransform( $xsl, $xml );
 		
 		if ($parse == false) {
-			return array($output, 'noparse' => true, 'isHTML' => true);
+			return [$output, 'noparse' => true, 'isHTML' => true];
 		}
 
 		return $output;
