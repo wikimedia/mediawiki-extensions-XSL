@@ -9,10 +9,12 @@
 		"test": [
 			"parallel-lint . --exclude vendor --exclude node_modules",
 			"phpcs -p -s",
-			"minus-x check ."
+			"minus-x check .",
+			"phpcs -sp"
 		],
 		"fix": [
 			"minus-x fix .",
+			"phpcbf",
 			"phpcbf"
 		]
 	}
