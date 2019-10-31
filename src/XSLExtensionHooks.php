@@ -11,7 +11,7 @@ class XSLExtensionHooks {
 			$parser->disableCache();
 		}
 
-		$output = XSLExtensionHooks::xslTransform( $xsl, $xml );
+		$output = self::xslTransform( $xsl, $xml );
 
 		if ( $parse == false ) {
 			return [ $output, 'noparse' => true, 'isHTML' => true ];
