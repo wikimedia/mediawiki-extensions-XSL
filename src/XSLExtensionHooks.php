@@ -6,7 +6,7 @@ class XSLExtensionHooks {
 		return true;
 	}
 
-	public static function xslRender( Parser $parser, $xsl, $xml, $parse=true, $nocache=false ) {
+	public static function xslRender( Parser $parser, $xsl, $xml, $parse = true, $nocache = false ) {
 		if ( $nocache ) {
 			$parser->disableCache();
 		}
