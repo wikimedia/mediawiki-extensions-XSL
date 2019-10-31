@@ -1,19 +1,18 @@
 <?php
 class XSLExtensionHooks {
-   // Register any render callbacks with the parser
-   public static function onParserFirstCallInit( Parser $parser ) {
-      $parser->setFunctionHook( 'xsl', [ self::class, 'xslRender' ] );
-      return true;
-   }
+	// Register any render callbacks with the parser
+	public static function onParserFirstCallInit( Parser $parser ) {
+		$parser->setFunctionHook( 'xsl', [ self::class, 'xslRender' ] );
+		return true;
+	}
 
-   public static function xslRender( Parser $parser, $xsl, $xml, $parse=true, $nocache=false ) {
-      
+	public static function xslRender( Parser $parser, $xsl, $xml, $parse=true, $nocache=false ) {
 		if ($nocache) {
 			$parser->disableCache();
 		}
 
 		$output = XSLExtensionHooks::xslTransform( $xsl, $xml );
-		
+
 		if ($parse == false) {
 			return [$output, 'noparse' => true, 'isHTML' => true];
 		}
@@ -21,8 +20,7 @@ class XSLExtensionHooks {
 		return $output;
 		// to return the contents inline
 		// return $parser->insertStripItem( $output, $parser->mStripState );
-
-   }
+	}
 
 	public static function xslTransform( $xsl_path, $xml_path ) {
 		$doc = new DOMDocument();
