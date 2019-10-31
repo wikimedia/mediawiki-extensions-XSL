@@ -7,14 +7,14 @@ class XSLExtensionHooks {
 	}
 
 	public static function xslRender( Parser $parser, $xsl, $xml, $parse=true, $nocache=false ) {
-		if ($nocache) {
+		if ( $nocache ) {
 			$parser->disableCache();
 		}
 
 		$output = XSLExtensionHooks::xslTransform( $xsl, $xml );
 
-		if ($parse == false) {
-			return [$output, 'noparse' => true, 'isHTML' => true];
+		if ( $parse == false ) {
+			return [ $output, 'noparse' => true, 'isHTML' => true ];
 		}
 
 		return $output;
@@ -26,11 +26,11 @@ class XSLExtensionHooks {
 		$doc = new DOMDocument();
 		$xsl = new XSLTProcessor();
 
-		$doc->load($xsl_path);
-		$xsl->importStyleSheet($doc);
+		$doc->load( $xsl_path );
+		$xsl->importStyleSheet( $doc );
 
-		$doc->load($xml_path);
-		return $xsl->transformToXML($doc);
+		$doc->load( $xml_path );
+		return $xsl->transformToXML( $doc );
 	}
 
 }
