@@ -18,7 +18,7 @@
 		"ParserFirstCallInit": "XSLExtensionHooks::onParserFirstCallInit"
 	},
 	"ExtensionMessagesFiles": {
-		"XSLExtensionMagic": "XSLExtension.i18n.php"
+		"XSLExtensionMagic": "XSLExtension.i18n.magic.php"
 	},
 	"manifest_version": 2
 }
