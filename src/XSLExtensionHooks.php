@@ -8,7 +8,7 @@ class XSLExtensionHooks {
 
 	public static function xslRender( Parser $parser, $xsl, $xml, $parse = true, $nocache = false ) {
 		if ( $nocache ) {
-			$parser->disableCache();
+			$parser->getOutput()->updateCacheExpiry( 0 );
 		}
 
 		$output = self::xslTransform( $xsl, $xml );

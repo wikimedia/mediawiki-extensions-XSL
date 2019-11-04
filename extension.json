@@ -20,5 +20,8 @@
 	"ExtensionMessagesFiles": {
 		"XSLExtensionMagic": "XSLExtension.i18n.magic.php"
 	},
-	"manifest_version": 2
+	"manifest_version": 2,
+	"requires": {
+		"MediaWiki": ">= 1.16.3"
+	}
 }
