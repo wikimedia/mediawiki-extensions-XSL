@@ -1,9 +1,12 @@
 <?php
 class XSLExtensionHooks {
-	// Register any render callbacks with the parser
+	/**
+	 * Register any render callbacks with the parser
+	 *
+	 * @param Parser $parser
+	 */
 	public static function onParserFirstCallInit( Parser $parser ) {
 		$parser->setFunctionHook( 'xsl', [ self::class, 'xslRender' ] );
-		return true;
 	}
 
 	public static function xslRender( Parser $parser, $xsl, $xml, $parse = true, $nocache = false ) {
