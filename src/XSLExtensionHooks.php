@@ -21,8 +21,8 @@ class XSLExtensionHooks {
 		}
 
 		return $output;
-		// to return the contents inline
-		// return $parser->insertStripItem( $output, $parser->mStripState );
+		// to return the contents inline (this requires MW >= 1.34)
+		// return $parser->insertStripItem( $output, $parser->getStripState() );
 	}
 
 	public static function xslTransform( $xsl_path, $xml_path ) {
