@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kly"
+			"Kly",
+			"捍粵者"
 		]
 	},
-	"xsl-desc": "在 XML 文件上執行 XSL 轉換"
+	"xsl-desc": "以XSL轉換XML文件"
 }
