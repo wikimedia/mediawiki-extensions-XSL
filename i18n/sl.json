@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"xsl-desc": "Izvede transformacijo XLS dokumentov XML"
+}
