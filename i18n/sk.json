@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"xsl-desc": "Vykonáva XSL transformáciu na XML dokumentoch"
+}
